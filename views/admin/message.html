@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+</head>
+
+<body>添加成功 <br /><span>5 </span>秒后自动跳转...<br /><a href="/admin/addNews">点击我直接跳转</a></body>
+
+</html>
+<script type="text/javascript">let timer = document.querySelector("span").innerText;
+    //- console.log(timer);
+    timer = parseInt(timer);
+    setInterval(() => {
+        timer--;
+        document.querySelector("span").innerText = timer;
+        if (timer < 1) {
+            window.location.href = `/admin/addNews`;
+        }
+    }, 1000)</script>

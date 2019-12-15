@@ -1,0 +1,25 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title Document
+  body
+    | #{res.info}
+    br
+    span 5 
+    | 秒后自动跳转...
+    br
+    a(href=address) 点击我直接跳转
+    script(type='text/javascript').
+      let timer = document.querySelector("span").innerText;
+      //- console.log(timer);
+      timer = parseInt(timer);
+      setInterval(() => {
+      timer--;
+      document.querySelector("span").innerText = timer;
+      if (timer < 1) {
+      window.location.href = '#{address}';
+      }
+      }, 1000)

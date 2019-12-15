@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .addInput div {
+            margin-top: 30px;
+        }
+        
+
+        .title {
+            -webkit-appearance: none;
+            background-color: #fff;
+            background-image: none;
+            border-radius: 4px;
+            border: 1px solid #dcdfe6;
+            box-sizing: border-box;
+            color: #606266;
+            display: inline-block;
+            font-size: inherit;
+            height: 40px;
+            line-height: 40px;
+            outline: none;
+            padding: 0 15px;
+        }
+
+        .content {
+            display: block;
+            resize: vertical;
+            padding: 5px 15px;
+            line-height: 1.5;
+            box-sizing: border-box;
+            width: 300px;
+            height: 100px;
+            font-size: inherit;
+            color: #606266;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #dcdfe6;
+            border-radius: 4px;
+        }
+
+        .addInput div input:focus {
+            outline: none;
+            border-color: #409eff;
+        }
+
+        .contentContainer {
+            display: flex;
+        }
+
+        .selectStyle {
+            background-color: #fff;
+            background-image: none;
+            border-radius: 4px;
+            border: 1px solid #dcdfe6;
+            box-sizing: border-box;
+            color: #606266;
+            display: inline-block;
+            font-size: inherit;
+            height: 40px;
+            line-height: 40px;
+            outline: none;
+            padding: 0 15px;
+            width: 200px;
+        }
+
+        .fileinput-button {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            background: #409eff;
+            padding: 9px 15px;
+            font-size: 12px;
+            border-radius: 3px;
+            color: white;
+        }
+
+        .fileinput-button input {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            opacity: 0;
+            font-size: 50px;
+        }
+
+        .btn {
+            background-color: #409eff;
+            color: white;
+            display: inline-block;
+            line-height: 1;
+            white-space: nowrap;
+            cursor: pointer;
+            border: 1px solid #dcdfe6;
+            -webkit-appearance: none;
+            text-align: center;
+            box-sizing: border-box;
+            outline: none;
+            margin: 0;
+            transition: .1s;
+            font-weight: 500;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            padding: 12px 20px;
+            font-size: 14px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu-content">
+        <h1>添加新闻</h1>
+        <form class="addInput" method="post" action="/addNews" enctype="multipart/form-data">
+            <div>
+                标题：<input class="title" type="text" />
+            </div>
+            <div class="contentContainer">
+                内容：<textarea class="content" name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div>
+                类型：<select class="selectStyle" name="" id="">
+                    <option value="逮捕">
+                        逮捕
+                    </option>
+                    <option value="消息">
+                        消息
+                    </option>
+                    <option value="通讯">
+                        通讯
+                    </option>
+                    <option value="文学">
+                        文学
+                    </option>
+                </select>
+            </div>
+            <div>
+                国家：<select class="selectStyle" name="" id="">
+                    <option value="美国">
+                        美国
+                    </option>
+                    <option value="韩国">
+                        韩国
+                    </option>
+                    <option value="日本">
+                        日本
+                    </option>
+                    <option value="英国">
+                        英国
+                    </option>
+                </select>
+            </div>
+            <div class="uploadContainer">
+                缩略图：
+                <span class="fileinput-button">
+                    <span>上传图片</span>
+                    <input class="imgFile" type="file" name="" />
+                </span>
+            </div>
+            <div>
+                <button class="btn" type="submit">提交</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

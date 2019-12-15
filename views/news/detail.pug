@@ -1,0 +1,26 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title Document
+    style.
+      .text{
+      width: 640px;
+      margin: 0 auto;
+      }
+      .article-info{
+      color:#999;
+      font-size: 14px;
+      }
+      p{
+      font-size: 16px;
+      line-height: 30px;
+      }
+  body
+    .text
+      h1.title #{dataItem.title}
+      .article-info  类型：#{dataItem.type} 时间：#{dataItem.addTime}
+      p.content
+        | #{dataItem.content}
